@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 // Home row mods macro
 
@@ -16,7 +16,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
@@ -33,14 +33,14 @@
                 &kp Q        &kp W       &kp E    &kp R         &kp T         &kp Y       &kp U          &kp I      &kp O       &kp P
                 &ht LCTRL A  &ht LCMD S  &lt 2 D  &ht LSHIFT F  &ht LALT G    &ht RALT H  &ht RSHIFT J   &kp K      &ht RCMD L  &ht RCTRL SEMI
                 &kp Z        &kp X       &kp C    &kp V         &kp B         &kp N       &kp M          &kp COMMA  &kp PERIOD  &kp SLASH
-                                                &lt 1 SPACE   &kp TAB       &kp ENTER   &kp BACKSPACE
+                                                  &lt 1 SPACE   &kp TAB       &kp ENTER   &kp BACKSPACE
             >;
         };
 
         symbols {
             bindings = <
-                &trans        &kp ESCAPE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &trans     &kp N7        &kp N8        &kp N9        &kp ASTERISK
-                &trans        &kp TILDE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT      &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+                &bt BT_SEL 0  &kp ESCAPE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &trans     &kp N7        &kp N8        &kp N9        &kp ASTERISK
+                &bt BT_SEL 1  &kp TILDE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT      &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
                 &kp CAPSLOCK  &kp HASH    &kp LEFT_BRACKET      &kp RBKT               &kp GRAVE    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
                                                                 &trans                 &trans       &trans     &kp N0
             >;
@@ -48,10 +48,10 @@
 
         arrows {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans          &kp UP_ARROW    &trans           &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans
-                                        &trans  &trans    &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans      &trans          &kp UP_ARROW    &trans           &trans
+                &trans  &trans  &trans  &trans  &trans    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans      &trans          &trans          &trans           &trans
+                                        &trans  &trans    &bt BT_CLR  &trans
             >;
         };
     };
