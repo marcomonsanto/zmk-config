@@ -20,7 +20,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hml: hml {
+        hml: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
             bindings = <&kp>, <&kp>;
@@ -34,7 +34,7 @@
             hold-trigger-on-release;
         };
 
-        hmr: hmr {
+        hmr: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
             bindings = <&kp>, <&kp>;
