@@ -48,10 +48,10 @@
 
         arrows {
             bindings = <
-&trans  &trans  &trans        &trans        &bt BT_CLR    &trans  &trans          &kp UP_ARROW    &trans           &trans
-&trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &trans        &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans        &trans        &trans        &trans  &trans          &trans          &trans           &trans
-                              &trans        &trans        &trans  &trans
+&bt BT_SEL 1  &bt BT_SEL 0  &trans   &trans  &bt BT_CLR    &trans  &trans          &kp UP_ARROW    &trans           &trans
+&trans        &trans        &trans   &trans  &trans        &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans        &trans        &trans   &trans  &trans        &trans  &trans          &trans          &trans           &trans
+                                     &trans  &trans        &trans  &trans
             >;
         };
     };
